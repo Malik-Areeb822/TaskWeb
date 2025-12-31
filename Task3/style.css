@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 20px 30px 0px 30px;
+}
+
+.container img {
+  width: 80px;
+}
+
+.main {
+  background-color: #6e0a0a;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 100px;
+  gap: 80px;
+  margin: 10px 40px 40px 40px;
+}
+
+.left {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+}
+
+.left h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.left p {
+  margin-bottom: 30px;
+}
+
+.left h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  padding-bottom: 60%;
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  background: transparent;
+  border: 2px solid white;
+  padding: 14px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.right h2 {
+  color: white;
+  margin: 30px 0 10px;
+}
+
+.right p {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.check label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check input[type="checkbox"] {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid white;
+}
+
+textarea {
+  width: 100%;
+  background: transparent;
+  border: 2px solid white;
+  padding: 12px;
+  margin-bottom: 25px;
+  color: white;
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#button1 {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 14px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+}
