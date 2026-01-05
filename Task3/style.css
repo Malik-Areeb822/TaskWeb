@@ -23,6 +23,22 @@ body {
   padding: 80px 100px;
   gap: 80px;
   margin: 10px 40px 40px 40px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 100px;
+  height: 100px;
+
+  background: white;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 
 .left {
@@ -30,20 +46,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 30px;
 }
 
 .left h1 {
-  font-size: 64px;
-  margin-bottom: 10px;
+  font-size: 72px;
+  margin-bottom: 0px;
+  font-weight: 800;
 }
 
 .left p {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+  font-size: 20px;
 }
 
 .left h2 {
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 600;
   color: black;
   padding-bottom: 60%;
@@ -60,7 +77,7 @@ input[type="email"] {
   background: transparent;
   border: 2px solid white;
   padding: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   color: white;
 }
 
@@ -80,11 +97,12 @@ input::placeholder {
 }
 
 .check {
+  background-color: transparent;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .check label {
@@ -95,9 +113,32 @@ input::placeholder {
 
 .check input[type="checkbox"] {
   appearance: none;
+  -webkit-appearance: none;
+
+  background-color: transparent;
   width: 12px;
   height: 12px;
   border: 1.5px solid white;
+  cursor: pointer;
+}
+
+.check input[type="checkbox"]:checked {
+  background-color: transparent;
+  position: relative;
+}
+
+.check input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0px;
+
+  width: 4px;
+  height: 8px;
+
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 textarea {
@@ -105,7 +146,7 @@ textarea {
   background: transparent;
   border: 2px solid white;
   padding: 12px;
-  margin-bottom: 25px;
+
   color: white;
 }
 
@@ -117,8 +158,21 @@ textarea::placeholder {
   background-color: white;
   color: black;
   border: none;
-  padding: 14px;
-  font-size: 20px;
-  cursor: pointer;
   padding: 10px;
+  font-size: 26px;
+  cursor: pointer;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+#plus {
+  margin-left: 100px;
+}
+
+textarea {
+  padding-top: 70px; /* adjust until centered */
+}
+
+textarea:not(:placeholder-shown) {
+  padding-top: 12px;
 }
