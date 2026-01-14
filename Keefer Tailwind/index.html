@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Law Firm - Tailwind Conversion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #menu-toggle:checked ~ .menu {
+        display: flex !important;
+      }
+      /* Custom rotation from your CSS */
+      .confidential-rotate {
+        transform: rotate(18deg);
+      }
+      @media (max-width: 991px) {
+        .confidential-rotate {
+          transform: rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="font-sans box-border m-0 p-0 md:p-5">
+    <header
+      class="flex flex-col md:flex-row justify-between items-center text-center md:text-left lg:p-0 lg:m-0"
+    >
+      <div class="w-full md:w-[70%]">
+        <img
+          src="logo.png"
+          alt="Logo"
+          id="logo"
+          class="w-full md:w-[70%] lg:w-[60%] xl:w-[65%] mx-auto md:mx-0"
+        />
+      </div>
+
+      <div class="w-full md:w-[30%] md:p-[15px] lg:p-[10px] xl:p-[20px]">
+        <span
+          class="text-[#890808] text-base sm:text-lg md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[25px] font-bold block"
+        >
+          CALL OUR OFFICES NOW!
+        </span>
+        <hr
+          class="border-[1.5px] border-black w-[40%] md:w-[80%] mx-auto md:mx-0 my-[10px]"
+        />
+        <span
+          class="text-[22px] sm:text-[28px] md:text-[28px] lg:text-[34px] xl:text-[40px] 2xl:text-[46px] font-black leading-tight block"
+        >
+          +86 10 8888 88
+        </span>
+        <span
+          class="text-[13px] sm:text-[14px] md:text-[14px] lg:text-[15px] xl:text-[17px] 2xl:text-[19px] font-bold block"
+        >
+          Get Your Questions Answered Fast
+        </span>
+      </div>
+    </header>
+
+    <nav class="relative">
+      <input type="checkbox" id="menu-toggle" class="hidden" />
+
+      <label
+        for="menu-toggle"
+        class="menu-icon md:hidden block p-[15px] cursor-pointer bg-[#890808] text-right"
+      >
+        <img
+          src="responsive_menu_icon.png"
+          alt="Menu"
+          class="w-[30px] inline-block"
+        />
+      </label>
+
+      <div
+        class="menu bg-[#890808] p-5 md:py-5 md:px-10 w-full flex flex-col md:flex-row justify-center md:justify-end items-center gap-[15px] md:gap-5 hidden md:flex"
+      >
+        <a href="#" class="text-white font-light text-xl no-underline">HOME</a>
+        <a href="#" class="text-white font-light text-xl no-underline"
+          >BIOGRAPHY</a
+        >
+        <a href="#" class="text-white font-light text-xl no-underline">BLOG</a>
+        <a href="#" class="text-white font-light text-xl no-underline"
+          >AREAS WE SERVE</a
+        >
+        <a href="#" class="text-white font-light text-xl no-underline"
+          >LIBRARY</a
+        >
+        <a href="#" class="text-white font-light text-xl no-underline"
+          >CONTACT</a
+        >
+      </div>
+    </nav>
+
+    <section
+      class="banners flex flex-col md:flex-row items-stretch w-full p-0 md:p-5 lg:p-10 gap-10 md:gap-5 lg:gap-10 my-5 md:my-0"
+    >
+      <div class="left1 flex flex-col flex-1 px-5 md:px-0">
+        <img
+          src="gurantee_banner.gif"
+          alt=""
+          class="w-full h-auto md:h-full object-cover block max-h-[300px] md:max-h-none"
+        />
+      </div>
+
+      <div
+        class="right1 flex-1 bg-[url('form_bg.jpg')] bg-cover flex flex-col justify-center mx-5 pb-5 px-5 md:px-0"
+      >
+        <div class="top flex flex-row justify-between flex-wrap">
+          <p
+            class="bg-[#890808] text-white font-serif font-bold text-2xl lg:text-[24px] xl:text-[30px] px-2.5 h-auto max-h-[50px] m-0 flex items-center"
+          >
+            QUESTIONS?
+          </p>
+          <h2
+            class="px-[10px] md:px-[30px] py-2.5 leading-tight text-[22px] md:text-[22px] lg:text-[22px] xl:text-[22px] 2xl:text-2xl font-bold"
+          >
+            Have a
+            <span class="text-[28px] xl:text-[36px] text-[#053c89]"
+              >Question</span
+            ><br />
+            About Your Case?
+          </h2>
+        </div>
+
+        <p class="px-[10px] md:px-[30px] text-lg">
+          Enter Your Information and get your questions answered quickly and
+          discreetly or call us at
+          <span class="font-bold">+023 327 29312</span>
+        </p>
+
+        <div
+          class="form1 flex flex-col lg:flex-row items-center lg:items-start gap-2.5 pt-2.5 flex-wrap"
+        >
+          <form
+            class="flex flex-col gap-2.5 flex-[2] w-full px-2.5 md:px-[30px]"
+          >
+            <div
+              class="grid grid-cols-1 md:grid-cols-[50px_1fr] items-center gap-1.5 md:gap-2.5"
+            >
+              <label class="font-bold text-sm">NAME:</label>
+              <input type="text" class="h-[35px] border border-[#999] w-full" />
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-[50px_1fr] items-center gap-1.5 md:gap-2.5"
+            >
+              <label class="font-bold text-sm">EMAIL:</label>
+              <input type="text" class="h-[35px] border border-[#999] w-full" />
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-[50px_1fr] items-center gap-1.5 md:gap-2.5"
+            >
+              <label class="font-bold text-sm">PHONE:</label>
+              <input type="text" class="h-[35px] border border-[#999] w-full" />
+            </div>
+          </form>
+          <img
+            src="confidential.png"
+            alt=""
+            class="w-[40%] md:w-[30%] lg:w-[100px] xl:w-[150px] confidential-rotate self-center lg:self-start lg:pr-5 mt-2.5 lg:mt-0"
+          />
+        </div>
+
+        <textarea
+          placeholder="Tell us about your case here"
+          class="p-2.5 mx-2.5 md:mx-[30px] my-2.5 w-[calc(100%-20px)] md:w-[calc(100%-60px)] border border-[#999] resize-y"
+          rows="4"
+        ></textarea>
+
+        <div
+          class="btm flex flex-col md:flex-row items-start md:items-center flex-wrap px-[10px] md:px-[30px] gap-[15px] md:gap-0 pt-2.5"
+        >
+          <p class="p-0 font-serif text-[#999] m-0">100% Privacy Guaranteed!</p>
+          <button
+            class="bg-[#890808] text-white text-lg md:ml-5 px-5 py-3 border-none cursor-pointer flex items-center justify-center gap-2.5 w-full md:w-auto"
+          >
+            Ask Us About Your Case
+            <img src="bullet_white.gif" alt="" class="h-3" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="btm3 flex flex-col lg:flex-row items-stretch w-full p-5 sm:p-[30px] lg:p-10 gap-5 lg:gap-[15px] xl:gap-5 shadow-[0_12px_20px_-10px_rgba(0,0,0,0.8)]"
+    >
+      <div class="left2 flex-1 flex flex-col pt-2.5">
+        <h1
+          class="text-[22px] xl:text-[26px] m-0 mb-2.5 leading-tight font-bold"
+        >
+          CHARGED WITH <span class="text-[#890808]">DUI?</span>
+        </h1>
+        <p class="text-xl py-2.5 font-bold text-[#890808] m-0 px-0">
+          FREE CASE EVALUATION
+        </p>
+        <div class="txt flex flex-row sm:flex-row py-2.5 gap-2.5">
+          <div class="innerleft1 flex-[2] flex flex-col gap-2.5">
+            <span class="text-black font-medium text-base leading-snug"
+              >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur consequuntur</span
+            >
+            <span class="text-black font-medium text-base leading-snug"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus, laborum!</span
+            >
+          </div>
+          <div class="innerright1 flex-1">
+            <img
+              src="paste_board.gif"
+              class="w-full max-w-[80px] sm:max-w-[100px] h-auto"
+            />
+          </div>
+        </div>
+        <div class="mt-auto">
+          <hr class="w-full border-[#ccc] border-t mb-[15px]" />
+          <button
+            class="px-5 py-2.5 bg-[#890808] text-white text-sm shadow-[0_4px_6px_rgba(0,0,0,0.3)] mt-2.5 inline-flex items-center gap-2 w-full sm:w-auto justify-center sm:justify-start"
+          >
+            CLICK HERE <img src="bullet_white.gif" class="h-2.5" />
+          </button>
+        </div>
+      </div>
+
+      <div class="mid2 flex-1 flex flex-col lg:border-x border-black">
+        <div
+          class="up flex flex-1 items-center justify-between p-[15px] sm:p-5 border lg:border-none border-none"
+        >
+          <div class="flex-[2] pr-2.5">
+            <h1 class="text-[22px] xl:text-[26px] font-bold">
+              LAW <span class="text-[#890808]">BLOG</span>
+            </h1>
+            <p class="py-2.5 font-bold leading-normal px-0">
+              Learn more about <br />
+              virginia Traffic Laws
+            </p>
+            <button
+              class="px-5 py-2.5 bg-[#890808] text-white text-sm shadow-[0_4px_6px_rgba(0,0,0,0.3)] mt-2.5 inline-flex items-center gap-2"
+            >
+              CLICK HERE <img src="bullet_white.gif" class="h-2.5" />
+            </button>
+          </div>
+          <div class="flex-1 flex justify-center items-center">
+            <img src="pic1.gif" class="max-w-full h-auto max-h-20" />
+          </div>
+        </div>
+        <div
+          class="down flex flex-1 items-center justify-between p-[15px] sm:p-5 border-t border-gray-400"
+        >
+          <div class="flex-[2] pr-2.5">
+            <h1 class="text-[22px] xl:text-[26px] font-bold">
+              CASE <span class="text-[#890808]">RESULTS</span>
+            </h1>
+            <p class="px-0">Lorem ipsum dolor sit amet</p>
+            <button
+              class="px-5 py-2.5 bg-[#890808] text-white text-sm shadow-[0_4px_6px_rgba(0,0,0,0.8)] mt-4 inline-flex items-center gap-2"
+            >
+              CLICK HERE <img src="bullet_white.gif" class="h-2.5" />
+            </button>
+          </div>
+          <div class="flex-1 flex justify-center items-center">
+            <img src="order_icon.gif" class="max-w-full h-auto max-h-20" />
+          </div>
+        </div>
+      </div>
+
+      <div class="right2 flex-1 flex flex-col gap-[15px] items-start">
+        <div class="inner3 flex gap-2.5 flex-wrap">
+          <img
+            src="qqq.gif"
+            class="h-auto max-w-[100px] lg:max-w-[48%] object-contain"
+          />
+          <img
+            src="national_college_large.gif"
+            class="h-auto max-w-[100px] lg:max-w-[48%] object-contain"
+          />
+        </div>
+        <h1 class="text-[22px] xl:text-[26px] font-bold">
+          CERTIFICATES & <br /><span class="text-[#890808]">CREDENTIALS</span>
+        </h1>
+        <p class="py-2.5 leading-relaxed px-0">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
+          dolores, reprehenderit officia enim iusto quam?
+        </p>
+        <button
+          class="px-5 py-2.5 bg-[#890808] text-white text-sm shadow-[0_4px_6px_rgba(0,0,0,0.3)] mt-2.5 inline-flex items-center gap-2 w-full sm:w-[37%] justify-center"
+        >
+          CLICK HERE <img src="bullet_white.gif" class="h-2.5" />
+        </button>
+      </div>
+    </div>
+
+    <section
+      class="container4 flex flex-col md:flex-row w-full p-[15px] sm:p-5 md:p-[25px] lg:p-[30px] xl:p-10 gap-[15px] md:gap-5 lg:gap-10"
+    >
+      <div class="left3 flex-1">
+        <h1 class="text-[22px] md:text-2xl font-bold">
+          Practice <span class="text-[#890808]">Areas</span>
+        </h1>
+
+        <div
+          class="cards bg-[#5f5d5d] border-l-[8px] border-[#a31212] text-white p-2 md:p-2.5 mt-[15px] md:mt-5"
+        >
+          <h2 class="text-base md:text-lg m-0 px-0 font-bold">DUI & DWI</h2>
+          <p class="text-sm md:ml-[25%] lg:ml-[60%] px-0 m-0">
+            Learn More <img src="bullet_red.gif" class="inline" />
+          </p>
+        </div>
+        <div
+          class="cards bg-[#5f5d5d] border-l-[8px] border-[#a31212] text-white p-2 md:p-2.5 mt-[15px] md:mt-5"
+        >
+          <h2 class="text-base md:text-lg m-0 px-0 font-bold">
+            RECKLESS DRIVING
+          </h2>
+          <p class="text-sm md:ml-[25%] lg:ml-[60%] px-0 m-0">
+            Learn More <img src="bullet_red.gif" class="inline" />
+          </p>
+        </div>
+        <div
+          class="cards bg-[#5f5d5d] border-l-[8px] border-[#a31212] text-white p-2 md:p-2.5 mt-[15px] md:mt-5"
+        >
+          <h2 class="text-base md:text-lg m-0 px-0 font-bold">
+            SPEEDING TICKETS
+          </h2>
+          <p class="text-sm md:ml-[25%] lg:ml-[60%] px-0 m-0">
+            Learn More <img src="bullet_red.gif" class="inline" />
+          </p>
+        </div>
+        <div
+          class="cards bg-[#5f5d5d] border-l-[8px] border-[#a31212] text-white p-2 md:p-2.5 mt-[15px] md:mt-5"
+        >
+          <h2 class="text-base md:text-lg m-0 px-0 font-bold">
+            TRAFFIC VIOLATIONS
+          </h2>
+          <p class="text-sm md:ml-[25%] lg:ml-[60%] px-0 m-0">
+            Learn More <img src="bullet_red.gif" class="inline" />
+          </p>
+        </div>
+
+        <h1 class="p-5 text-[22px] md:text-2xl font-bold">
+          Learn <span class="text-[#890808]">More</span> About
+        </h1>
+      </div>
+
+      <div class="mid3 flex-[2]">
+        <h1 class="pb-5 text-[22px] md:text-2xl font-bold">PAGE TITLE HERE</h1>
+        <p
+          class="text-sm md:text-base lg:text-[16px] leading-[20px] md:leading-[22px] lg:leading-[25px] px-0"
+        >
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+          reprehenderit ad rem corporis minus debitis doloribus hic facere aut
+          repellendus sed quibusdam dignissimos, ullam similique. Laboriosam
+          enim aspernatur perferendis vitae id est, quibusdam minus voluptatem
+          at ab labore vero quam...
+        </p>
+        <p
+          class="text-sm md:text-base lg:text-[16px] leading-[20px] md:leading-[22px] lg:leading-[25px] px-0"
+        >
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+          reprehenderit ad rem corporis minus debitis doloribus hic facere aut
+          repellendus sed quibusdam dignissimos, ullam similique. Laboriosam
+          enim aspernatur perferendis vitae id est, quibusdam minus voluptatem
+          at ab labore vero quam...
+        </p>
+      </div>
+
+      <div class="right3 flex-1">
+        <div class="card p-2 md:p-2.5 mb-[15px] md:mb-5">
+          <h1 class="text-xl md:text-[22px] font-bold uppercase">
+            CLIENT <br />
+            <span class="text-[#890808]">TESTIMONIALS</span>
+          </h1>
+          <p class="p-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum!
+          </p>
+          <button
+            class="px-5 py-2.5 mt-4 bg-[#890808] text-white text-sm w-full md:w-auto"
+          >
+            CLICK HERE
+          </button>
+        </div>
+        <div class="card p-2 md:p-2.5 mb-[15px] md:mb-5">
+          <h1 class="text-xl md:text-[22px] font-bold uppercase">
+            DOWNLOAD FREE <span class="text-[#890808]">REPORTS</span>
+          </h1>
+          <p class="p-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum!
+          </p>
+          <button
+            class="px-5 py-2.5 mt-4 bg-[#890808] text-white text-sm w-full md:w-auto"
+          >
+            CLICK HERE
+          </button>
+        </div>
+        <div class="card p-2 md:p-2.5 mb-[15px] md:mb-5">
+          <h1 class="text-xl md:text-[22px] font-bold uppercase">
+            CONTACT OUR <br /><span class="text-[#890808]">OFFICES</span>
+          </h1>
+          <p class="p-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum!
+          </p>
+          <button
+            class="px-5 py-2.5 mt-4 bg-[#890808] text-white text-sm w-full md:w-auto"
+          >
+            CLICK HERE
+          </button>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <img
+            src="national_college_small.gif"
+            class="lg:w-[150px] mx-auto md:max-w-none h-auto block mb-2.5"
+          />
+          <img
+            src="qqq.gif"
+            class="w-[150px] mx-auto md:max-w-none h-auto block mb-2.5"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
